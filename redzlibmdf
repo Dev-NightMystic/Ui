@@ -2518,6 +2518,12 @@ function redzlib:MakeWindow(Configs)
 					Callback = Val1
 				end
 			end
+			
+			function Dropdown:Refresh(List, Clear)
+				if type(List) == "table" then
+					AddNewOptions(List, Clear)
+				end
+			end
 			return Dropdown
 		end
 		function Tab:AddSlider(Configs)
